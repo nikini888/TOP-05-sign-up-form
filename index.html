@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap" rel="stylesheet">
+    <title>Sign up</title>
+</head>
+
+<body>
+    <section class="formSign">
+        <header class="header">
+            <div class="headerLogo">
+                <div class="headerLogo-Img">
+                    <img src="./img/odin-lined.png" alt="logo Odin">
+                </div>
+                <p class="headerLogo-Text">odin</p>
+            </div>
+            <div class="headerImgInformation">
+                <p>Photo by <a href="https://unsplash.com/@leladesign">Lea L</a> on
+                    <a href="https://unsplash.com/">Unsplash</a>
+                </p>
+            </div>
+        </header>
+        <main>
+            <div class="main-intro container">
+                <p>This is not a real online service! You know you need something like this in your life to help you
+                    realize
+                    your deepest dreams. Sign up <em>now</em> to get stated</p>
+                <p>You <em>know</em> you want to.</p>
+            </div>
+            <form action="#">
+                <div class="form-Information">
+                    <div class="container">
+                        <h2>Let's do this!</h2>
+                        <div class="form-InformationItems">
+                            <div class="form-InformationItem">
+                                <input type="text" id="userFirstName" name="userFirstName" required placeholder=" ">
+                                <label for="userFirstName">first name</label>
+                                <p class="formError passwordError"><abbr title="note">*</abbr>Passwords do not match</p>
+
+                            </div>
+                            <div class="form-InformationItem">
+                                <input type="text" id="userLastName" name="userLastName" required placeholder=" ">
+                                <label for="userLastName">last name</label>
+                            </div>
+                            <div class="form-InformationItem">
+                                <input type="email" id="userEmail" name="userEmail" required placeholder=" ">
+                                <label for="userEmail">email</label>
+                                <p class="formError passwordError"><abbr title="note">*</abbr>Passwords do not match</p>
+
+                            </div>
+                            <div class="form-InformationItem">
+                                <input type="phone" id="userPhone" name="userPhone" required placeholder=" ">
+                                <label for="userPhone">phone number</label>
+                            </div>
+                            <div class="form-InformationItem">
+                                <input type="password" id="userPass" name="userFirstName" required placeholder=" ">
+                                <label for="userPass">passwords</label>
+                                <p class="formError passwordError"><abbr title="note">*</abbr>Passwords do not match</p>
+                            </div>
+                            <div class="form-InformationItem">
+                                <input type="password" id="userPassConfirm" name="userPassConfirm" required
+                                    placeholder=" ">
+                                <label for="userPassConfirm">confirm password</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <button type="submit" class="form-SbmitButton button">Create Account</button>
+                </div>
+            </form>
+            <div class="container">
+                <p class="formLogin">Already have an account? <a href="#">Log in</a></p>
+            </div>
+        </main>
+    </section>
+</body>
+
+</html>

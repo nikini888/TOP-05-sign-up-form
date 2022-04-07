@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'norseBold';
+    src: url('font/norse-bold-webfont.woff2') format('woff2'),
+         url('font/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+:root{
+    --font-logo:'norseBold';
+    --font-main:'Source Sans Pro';
+    --color-bg-body:#bb826c;
+    --color-bg-main:#f0ebdf;
+    --color-bg-form:#fef9ef;
+    --color-btn-bg:rgb(204, 83, 62);
+    --color-btn-text:rgb(247, 247, 247);
+    --color-text-primary:rgb(49, 49, 49);
+    --color-text-logo:#fff;
+}
+h2,p{
+    margin:0;
+}
+img{
+    max-width:100%;
+}
+input,button{
+    font-family: inherit;
+}
+a{
+    text-decoration: none;
+    color:var(--color-text-logo);
+}
+button{
+    border:none;
+}
+html{
+    font-size: 16px;
+}
+body{
+    background-color:var(--color-bg-body);
+    line-height:1.25;
+    font-size:1.5rem;
+    font-weight: 400;
+    font-family: var(--font-main), var(--font-logo),sans-serif;
+}
+.formSign{
+    width:clamp(350px,85vw,1200px);
+    margin:0 auto;
+    background-color:var(--color-bg-main);
+    min-height:100vh;
+}
+.container{
+    padding: 1em clamp(1em,5vw,2em);
+}
+.main-intro> *
+{
+    margin:1em 0;
+}
+
+.header{
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height:250px;
+    width:100%;
+    position:relative;
+}
+.headerLogo{
+    width:100%;
+    position:absolute;
+    top:20%;
+    max-height:150px;
+    background-color:rgba(0, 0, 0, 0.5);
+    display:flex;
+    justify-content: center;
+    gap:0.5em;
+    padding:0.75em;
+}
+.headerLogo-Img{
+    width:50px;
+}
+.headerLogo-Text{
+    font-family: var(--font-logo);
+    font-size:3rem;
+    color: var(--color-text-logo);
+}
+.headerImgInformation{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    text-align: center;
+    color:var(--color-text-logo);
+    font-size: 1rem;
+    padding:0.5em 0;
+}
+.form-Information{
+    width:100%;
+    background-color: var(--color-bg-form);
+    
+}
+.form-Information .container{
+    box-shadow: 0px 2.7px 1.3px rgba(0, 0, 0, 0.085),
+    0px 7px 6px rgba(0, 0, 0, 0.12);
+  
+}
+.form-Information h2{
+    font-size: 1.75rem;
+}
+.form-InformationItem{
+    display:flex;
+    flex-direction: column-reverse;
+    margin:0.75em 0;
+}
+.form-InformationItem label{
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    color:var(--color-text-primary);
+    margin-bottom:0.25em;
+    position:relative;
+    width:fit-content;
+}
+.form-InformationItem input{
+    -webkit-appearance: none;
+    appearance:none;
+    border:1px solid #E5E7EB;
+    font-size:1.25rem;
+    border-radius:5px;
+    padding:0.25rem 1rem;
+}
+.form-InformationItem input:hover,
+.form-InformationItem input:focus{
+    box-shadow:
+    2.3px 2px 2.8px rgba(0, 0, 0, 0.026),
+    7px 6px 11px rgba(0, 0, 0, 0.05);
+}
+.form-InformationItem input:focus{
+    border:1px solid #a0aecc;
+    outline: none;
+}
+.form-InformationItem input:valid{
+    border-color:#40916c;
+}
+.form-InformationItem input:invalid:not(:focus):not(:placeholder-shown){
+    border-color:#df542a;
+}
+.formError{
+    color:red;
+    font-size: 1rem;
+    order:-1;
+    visibility:hidden;
+    height: 0;
+}
+.form-InformationItem input:invalid:not(:placeholder-shown) ~ .formError{
+    visibility:visible;
+    height: auto;
+}
+.form-InformationItem input:required ~ label::after{
+    position:absolute;
+    content:'*';
+    font-size: 1.125rem;
+    right:-10px;
+    bottom:0;
+}
+.form-SbmitButton{
+    padding:0.75em 1.5em;
+    font-size: 1.5rem;
+    background-color: var(--color-btn-bg);
+    color:var(--color-btn-text);
+    border-radius: 10px;
+    box-shadow: 0px 2.7px 1.3px rgba(0, 0, 0, 0.085),
+    0px 7px 6px rgba(0, 0, 0, 0.12);
+    cursor:pointer;
+}
+.formLogin{
+    font-weight: 300;
+    color:var(--color-text-primary)
+}
+.formLogin a{
+    color:var(--color-btn-bg)
+}
+@media (min-width:800px){
+    .formSign,
+    .form-InformationItems{
+        display:flex;
+    }
+    .form-InformationItems{
+        flex-wrap:wrap;
+        gap:1em;
+        padding-top:1em;
+        justify-content: space-between;
+    }
+    .form-InformationItems > *{
+        max-width:180px;
+        margin:0;
+    }
+    .main-intro> *
+{
+    margin:0.5em 0;
+}
+    
+}
+@media (min-width:1000px){
+    .form-InformationItems > *{
+        max-width:200px;
+    }
+}
+@media (min-width:1200px){
+    .form-InformationItems > *{
+        max-width:250px;
+    }
+}
